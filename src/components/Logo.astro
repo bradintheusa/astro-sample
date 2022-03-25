@@ -1,0 +1,32 @@
+---
+const { greeting = 'Hello', imgName } = Astro.props;
+---
+
+<article>
+	<div class="container">
+		<p>{greeting} goes here</p>
+	</div>
+
+<p>{imgName}</p>
+
+
+               <img src={imgName} alt="">
+
+</article>
+
+<style>
+
+.container {
+	font-size: 18px;
+	padding: 3em;
+	color: whitesmoke;
+                  	background-color: navy;
+
+
+
+}
+
+.container::before {
+	content: {imgName};
+}
+</style>
